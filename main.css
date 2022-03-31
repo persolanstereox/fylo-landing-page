@@ -13,11 +13,12 @@
 }
 body {
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
-.header-content, .f-part, .padding-box {
+.header-content, .f-part, .s-part, .padding-box {
     padding: 3rem 5rem;
 }
-header, section, footer {
+.s-part, .t-part, footer {
     border: solid 1px red;
 }
 .header-content {
@@ -36,6 +37,7 @@ li, a, a:visited  {
     text-decoration: none;
     font-weight: 700;
     color: black;
+    cursor: pointer;
 }
 a:hover {
     color: var(--Desaturated-Blue);
@@ -57,35 +59,124 @@ a:hover {
 }
 h1 {
     font-weight: 700;
-    font-size: 2.5rem;
-    font-family: 'Raleway', sans-serif;
+    font-size: 2.3rem;
+    
 }
-h1, h4, .input-button {
+ h1, h4, .input-button {
     margin-bottom: 1.5rem;
 }
 h4 {
-    font-size: 1.3rem;
-    font-weight: 400;
+    font-size: 1.1rem;
+    font-weight: 500;
+    
+}
+h1, h4, label {
     font-family: 'Raleway', sans-serif;
 }
+
 .input-button {
     display: flex;
+    gap: 1rem;
+}
+.form_input-container {
+    position: relative;
+    
 }
 input {
     height: 2.5rem;
     width: 20rem;
     border: solid 1px black;
     border-radius: 3px;
-    padding-left: 10px;
+    padding-left: 16px;
     
+}
+label {
+position: absolute;
+cursor: text;
+opacity: 0.4;
+left: 1.2rem;
+bottom: 10px;
+transition: left 0.3s, opacity 0.3s;
+
+}
+input:focus + label, input:not(:placeholder-shown) + label {
+    left: 100px;
+    opacity: 0;
 }
 button {
     height: 2.5rem;
-    width: 10rem;
+    width: 12rem;
     background-color: var(--Bright-Blue);
     color: white;
     border-radius: 3px;
     border: none;
+    cursor: pointer;
+    overflow: hidden;
+    
+}
+button:focus {
+    outline: solid 2px black;
+}
+.s-part {
+    background-image: url(images/bg-curve-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 260% 100%;
+    background-position: 50%;
+    width: 100vw;
+
+}
+.t-part {
+    background-color: var(--Desaturated-Blue);
+    color: white;
+}
+footer {
+    background-color: var(--Very-Dark-Blue);
+    color: white;
+}
+.sec h1 {
+    margin-bottom: 5%;
+}
+.describtion {
+    width: 75%;
+}
+.describtion h4 {
+    margin-bottom: 1rem;
+}
+.describtion a {
+    color: var(--Moderate-Cyan);
+}
+ .dupa {
+    width: 35%;
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: solid 2px var(--Moderate-Cyan);
+    overflow: hidden;
+    position: relative;
+}
+.dupa::after {
+    content: "";
+    background-color: rgba(255,255,255,0.5);
+    height: 100px;
+    width: 50px;
+    display: block;
+    position: absolute;
+    left: -60px;
+    transform: skewX(-15deg);
+    transition: left 0.15s linear;
+}
+.dupa:hover::after {
+    left: 110%;
+}
+
+
+
+
+
+
+.ceo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 
