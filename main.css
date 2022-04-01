@@ -18,7 +18,7 @@ body {
 .header-content, .f-part, .s-part, .padding-box {
     padding: 3rem 5rem;
 }
-.s-part, .t-part, footer {
+.t-part, footer {
     border: solid 1px red;
 }
 .header-content {
@@ -70,7 +70,7 @@ h4 {
     font-weight: 500;
     
 }
-h1, h4, label {
+h1, h3, h4, label {
     font-family: 'Raleway', sans-serif;
 }
 
@@ -125,10 +125,7 @@ button:focus {
     width: 100vw;
 
 }
-.t-part {
-    background-color: var(--Desaturated-Blue);
-    color: white;
-}
+
 footer {
     background-color: var(--Very-Dark-Blue);
     color: white;
@@ -145,7 +142,7 @@ footer {
 .describtion a {
     color: var(--Moderate-Cyan);
 }
- .dupa {
+ .arrow {
     width: 35%;
     display: flex;
     gap: 0.5rem;
@@ -153,7 +150,7 @@ footer {
     overflow: hidden;
     position: relative;
 }
-.dupa::after {
+.arrow::after {
     content: "";
     background-color: rgba(255,255,255,0.5);
     height: 100px;
@@ -164,19 +161,90 @@ footer {
     transform: skewX(-15deg);
     transition: left 0.15s linear;
 }
-.dupa:hover::after {
+.arrow:hover::after {
     left: 110%;
 }
-
-
-
-
-
+.text-box {
+    box-shadow:  rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+    background-color: white;
+    height: 12rem;
+    width: 22rem;
+    overflow: hidden;
+    margin-top: 5%;
+    border-radius: 8px;
+    
+}
+.padding_tex_box {
+    padding: 5% 10%;
+    
+}
+.quotes, .ceo, h6 {
+    margin-bottom: 0.8rem;
+}
+.quotes {
+    height: 1rem;
+    width: 1rem;
+}
+h6 {
+    font-size: 11px;
+}
+.ceo {
+    display: flex;
+    gap: 0.5rem;
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.about {
+    font-size: 13px;
+}
 
 .ceo img {
-    width: 50px;
-    height: 50px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
+}
+.s img {
+    width: 95%;
+    height: 85%;
+}
+.t-part {
+    background-color: var(--Desaturated-Blue);
+    color: white;
+}
+.padding-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 5rem;
+}
+.info-box_sec {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.info-box_sec h3 {
+font-size: 30px;
+font-weight: 700;
+margin-bottom: 1rem;
+
+}
+.info-box_sec h6 {
+    font-size: 15px;
+    font-weight: 400;
+}
+.input-button_t-part {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 40%;
+}
+.input-button_t-part input {
+    width: 30rem;
 }
 
 
