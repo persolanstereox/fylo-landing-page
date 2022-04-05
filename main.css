@@ -15,7 +15,7 @@ body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
-.header-content, .f-part, .s-part, .padding-box {
+.header-content, .f-part {
     padding: 3rem 5rem;
 }
 .t-part, footer {
@@ -80,17 +80,18 @@ h1, h3, h4, label {
 }
 .form_input-container {
     position: relative;
+    width: 50%;
     
 }
-input {
+.form_input-container input {
     height: 2.5rem;
-    width: 20rem;
+    width: 100%;
     border: solid 1px black;
     border-radius: 3px;
     padding-left: 16px;
     
 }
-label {
+.form_input-container label {
 position: absolute;
 cursor: text;
 opacity: 0.4;
@@ -99,7 +100,7 @@ bottom: 10px;
 transition: left 0.3s, opacity 0.3s;
 
 }
-input:focus + label, input:not(:placeholder-shown) + label {
+.form_input-container input:focus + label, input:not(:placeholder-shown) + label {
     left: 100px;
     opacity: 0;
 }
@@ -112,6 +113,7 @@ button {
     border: none;
     cursor: pointer;
     overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     
 }
 button:focus {
@@ -120,16 +122,14 @@ button:focus {
 .s-part {
     background-image: url(images/bg-curve-desktop.svg);
     background-repeat: no-repeat;
-    background-size: 260% 100%;
+    background-size: 300% 100%;
     background-position: 50%;
     width: 100vw;
+    padding: 12rem 5rem 5rem;
 
 }
 
-footer {
-    background-color: var(--Very-Dark-Blue);
-    color: white;
-}
+
 .sec h1 {
     margin-bottom: 5%;
 }
@@ -174,7 +174,7 @@ footer {
     border-radius: 8px;
     
 }
-.padding_tex_box {
+.padding_text_box {
     padding: 5% 10%;
     
 }
@@ -199,12 +199,17 @@ h6 {
     
 }
 .about {
+    font-size: 10px;
+}
+.about :nth-child(1) {
+    font-family: 'Raleway', sans-serif;
     font-size: 13px;
+    margin-bottom: 3px;
 }
 
 .ceo img {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
 .s img {
@@ -218,14 +223,12 @@ h6 {
 .padding-box {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 5rem 5rem;
 }
 .info-box_sec {
     width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 .info-box_sec h3 {
 font-size: 30px;
@@ -234,7 +237,7 @@ margin-bottom: 1rem;
 
 }
 .info-box_sec h6 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
 }
 .input-button_t-part {
@@ -243,8 +246,28 @@ margin-bottom: 1rem;
     gap: 1rem;
     width: 40%;
 }
-.input-button_t-part input {
-    width: 30rem;
+.input-button_t-part .form_input-container {
+    width: 90%;
 }
+
+.input-button_t-part label {
+    opacity: 1;
+}
+
+footer {
+    background-color: var(--Very-Dark-Blue);
+    color: white;
+}
+.padding-box_s {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 5rem;
+}
+.informations {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
 
 
