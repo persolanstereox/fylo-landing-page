@@ -43,6 +43,7 @@ body {
 }
 .box {
     display: flex;
+    gap: 5rem;
 }
 .info-box, .image {
     width: 50%;
@@ -105,7 +106,7 @@ transition: left 0.3s, opacity 0.3s;
 }
 button {
     height: 2.5rem;
-    width: 12rem;
+    width: 35%;
     background-color: var(--Bright-Blue);
     color: white;
     border-radius: 3px;
@@ -141,13 +142,17 @@ button:focus {
 .describtion a {
     color: var(--Moderate-Cyan);
 }
+.arrow-container {
+    border-bottom: solid 2px var(--Moderate-Cyan);
+    width: 11.5rem;
+}
  .arrow {
-    width: 35%;
     display: flex;
     gap: 0.5rem;
-    border-bottom: solid 2px var(--Moderate-Cyan);
     overflow: hidden;
     position: relative;
+    cursor: pointer;
+    font-size: 1rem;
 }
 .arrow::after {
     content: "";
@@ -162,6 +167,9 @@ button:focus {
 }
 .arrow:hover::after {
     left: 110%;
+}
+.arrow-image img {
+    height: 100%;
 }
 .text-box {
     box-shadow:  rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
@@ -247,10 +255,13 @@ margin-bottom: 1rem;
 }
 .input-button_t-part .form_input-container {
     width: 90%;
+    box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
 }
-
 .input-button_t-part label {
-    opacity: 1;
+    color: black;
+}
+.input-button_t-part button {
+    width: 12rem;
 }
 
 footer {
@@ -318,6 +329,68 @@ margin-right: 0.7rem;
     height: 15px;
     width: 15px;
     
+}
+@media only screen and (max-width:600px) {
+    .header-content a img {
+        width: 60%;
+    }
+    .options ul {
+        font-size: 80%;
+        gap: 1.5rem;
+    }
+    .header-content, .f-part {
+        padding: 8% 5%;
+    }
+    .f-part, .describtion, .info-box h1 {
+        text-align: center;
+    }
+    .box {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        gap: 3rem;
+    }
+    .info-box, .image, .input-button, .form_input-container, button, .info-box_sec, .input-button_t-part {
+        width: 100%;
+    }
+    .box, .info-box, .input-button, .input-button_t-part {
+        align-items: center;
+    }
+    .info-box {
+        justify-content: space-around;
+    }
+    .arrow-container {
+        margin: 0 auto;
+    }
+    .text-box {
+        width: 80%;
+    }
+    .input-button {
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+    .s-part {
+        background-image: url(images/bg-curve-mobile.svg);
+        background-size: 500% 100%;
+        padding: 20% 5% 15%;
+    }
+    .padding-box {
+        flex-direction: column;
+       text-align: center;
+    }
+    .input-button_t-part button, .input-button_t-part .form_input-container {
+        width: 70%;
+    }
+    .padding-box, .padding-box_s {
+        padding: 15% 10% 15%;
+    }
+    .informations {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .icons-flex {
+        justify-content: center;
+    }
 }
 
 
