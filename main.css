@@ -18,18 +18,32 @@ body {
 .header-content, .f-part {
     padding: 3% 5%;
 }
+
+
+
+
+/* HEADER */ 
+
+
+
+
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
  ul {
     display: flex;
     list-style: none;
     padding-left: 0;
     gap: 3rem;
-
 }
+
+li {
+    min-width: 3rem;
+}
+
 .menu_options  {
     text-decoration: none;
     font-weight: 700;
@@ -41,35 +55,46 @@ body {
 .menu_options:hover {
     color: var(--Moderate-Cyan);
 }
+
+
+
+
+/* FIRST PART */ 
+
+
+
+
 .box {
     display: flex;
     gap: 5rem;
 }
+
 .info-box, .image {
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 .image  img {
     width: 100%;
     height: 100%;
 }
+
 h1 {
     font-weight: 700;
     font-size: 2.3rem;
-    
 }
+
  h1, h4, .input-button {
     margin-bottom: 1.5rem;
 }
+
 h4 {
     font-size: 1.1rem;
     font-weight: 500;
-    
 }
+
 h1, h3, h4, label {
     font-family: 'Raleway', sans-serif;
 }
@@ -81,16 +106,16 @@ h1, h3, h4, label {
 .form_input-container {
     position: relative;
     width: 50%;
-    
 }
+
 .form_input-container input {
     height: 2.5rem;
     width: 100%;
     border: solid 1px black;
     border-radius: 3px;
     padding-left: 16px;
-    
 }
+
 .form_input-container label {
 position: absolute;
 cursor: text;
@@ -98,12 +123,13 @@ opacity: 0.4;
 left: 1.2rem;
 bottom: 10px;
 transition: left 0.3s, opacity 0.3s;
-
 }
+
 .form_input-container input:focus + label, input:not(:placeholder-shown) + label {
     left: 100px;
     opacity: 0;
 }
+
 button {
     height: 2.5rem;
     width: 35%;
@@ -114,11 +140,26 @@ button {
     cursor: pointer;
     overflow: hidden;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    
 }
+
 button:focus {
     outline: solid 2px black;
 }
+button:hover {
+background-color: var(--Moderate-Cyan
+);
+transition: background-color 2s ease-out;
+
+}
+
+
+
+
+/* SECOND PART */ 
+
+
+
+
 .s-part {
     background-image: url(images/bg-curve-desktop.svg);
     background-repeat: no-repeat;
@@ -175,7 +216,7 @@ button:focus {
     box-shadow:  rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
     background-color: white;
     height: 12rem;
-    width: 22rem;
+    max-width: 22rem;
     overflow: hidden;
     margin-top: 5%;
     border-radius: 8px;
@@ -223,6 +264,15 @@ h6 {
     width: 95%;
     height: 85%;
 }
+
+
+
+
+/* THIRD PART */ 
+
+
+
+
 .t-part {
     background-color: var(--Desaturated-Blue);
     color: white;
@@ -263,6 +313,13 @@ margin-bottom: 1rem;
 .input-button_t-part button {
     width: 12rem;
 }
+
+
+
+
+/* FOOTER */ 
+
+
 
 footer {
     background-color: var(--Very-Dark-Blue);
@@ -330,6 +387,8 @@ margin-right: 0.7rem;
     width: 15px;
     
 }
+
+
 @media only screen and (max-width:600px) {
     .header-content a img {
         width: 60%;
@@ -355,20 +414,6 @@ margin-right: 0.7rem;
     .box, .info-box, .input-button, .input-button_t-part {
         align-items: center;
     }
-    .info-box {
-        justify-content: space-around;
-    }
-    .arrow-container {
-        margin: 0 auto;
-    }
-    .text-box {
-        width: 80%;
-    }
-    .input-button {
-        justify-content: center;
-        flex-direction: column;
-        
-    }
     .s-part {
         background-image: url(images/bg-curve-mobile.svg);
         background-size: 500% 100%;
@@ -378,12 +423,27 @@ margin-right: 0.7rem;
         flex-direction: column;
        text-align: center;
     }
-    .input-button_t-part button, .input-button_t-part .form_input-container {
-        width: 70%;
-    }
     .padding-box, .padding-box_s {
         padding: 15% 10% 15%;
     }
+    .info-box {
+        justify-content: space-around;
+    }
+    .arrow-container {
+        margin: 2rem auto;
+    }
+    .text-box {
+        width: 80%;
+    }
+    .input-button {
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+    .input-button_t-part button, .input-button_t-part .form_input-container {
+        width: 70%;
+    }
+    
     .informations {
         flex-direction: column;
         gap: 3rem;
