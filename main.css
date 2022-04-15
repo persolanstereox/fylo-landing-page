@@ -95,7 +95,7 @@ li {
 .list_drop-down li:hover {
     background-color: var(--Moderate-Cyan);
 }
-.menu_options:focus + .list_drop-down {
+.menu_options:focus + .list_drop-down, .list_drop-down:hover {
     display: block;
 
 }
